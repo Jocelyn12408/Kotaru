@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="css/favourites.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-item">
+            <a href="history.html">
+                <img src="icons/History.png" alt="History" class="nav-icon1">
+            </a>
+        </div>
+        <div class="nav-item-now">
+            <a href="favourites.html">
+                <img src="icons/Favourites.png" width="100px" height="100px" alt="Favourites" class="nav-icon2">
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="newchapter.html">
+                <img src="icons/New Chapters.png" alt="New Chapter" class="nav-icon1">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="search-box"></div>
+    <main class="main-content">
+        <div class="search-container">
+            <input type="search" class="search-bar" placeholder="Search manga">
+        </div>
+
+        <div class="tabs-line"></div>
+
+        <div class="tabs">
+            <button class="tab on" data-tab="all">All Favourites</button>
+            <!-- <button class="tab" data-tab="Action">Action</button>
+            <button class="tab" data-tab="Romance">Romance</button>
+            <button class="tab" data-tab="readLater">Read Later</button> -->
+        </div>
+        
+
+        <button type="button" class="addFolder">
+                +  Add Folder
+        </button>
+        
+        <div  id="mangaGrid" class="grid-container"></div>
+
+    </main>
+
+    <script src="js/favourites.js"></script>
+</body>
+</html>

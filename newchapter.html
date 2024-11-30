@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="css/newchapter.css">
+    <link rel="stylesheet" href="js/newchapter.js">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="nav-item">
+            <a href="history.html">
+                <img src="icons/History.png" alt="History" class="nav-icon1">
+            </a>
+        </div>
+        <div class="nav-item">
+            <a href="favourites.html">
+                <img src="icons/Favourites.png" width="100px" height="100px" alt="Favourites" class="nav-icon2">
+            </a>
+        </div>
+        <div class="nav-item-now">
+            <a href="newchapter.html">
+                <img src="icons/New Chapters.png" alt="New Chapter" class="nav-icon1">
+            </a>
+        </div>
+    </nav>
+    
+    <div class="search-box"></div>
+    <main class="main-content">
+        <div class="search-container">
+            <input type="search" class="search-bar" placeholder="Search manga">
+        </div>
+
+        <div class="tabs-line"></div>
+
+        <div class="tabs">
+            <button class="tab on">All Favourites</button>
+            <button class="tab">Action</button>
+            <button class="tab">Romance</button>
+            <button class="tab">Read Later</button>
+        </div>
+        
+        
+        <div class="grid-container">
+            <div class="manga">
+                <img src="Image/Pick Me Up.jpg" alt="Pick Me Up" class="manga-image">
+                <p class="manga-title">Pick Me Up</p>
+            </div>
+            <div class="manga">
+                <img src="Image/Reincarnation of the Suicidal Battle God.jpg" alt="Omniscient Reader's Viewpoint" class="manga-image">
+                <p class="manga-title">Reincarnation Of The Suicidal Battle God</p>
+            </div>
+            <div class="manga">
+                <img src="Image/The Devlishly Trash Duke.jpg" alt="The Devilishly Trash Duke" class="manga-image">
+                <p class="manga-title">The Devilishly Trash Duke</p>
+            </div>
+            <div class="manga">
+                <img src="Image/The Reason Why Raeliana Ended Up at the Duke's Mansion.jpg" alt="The Reason Why Raeliana Ended Up at the Duke's Mansion" class="manga-image">
+                <p class="manga-title">The Reason Why Raeliana Ended Up at the Duke's Mansion</p>
+            </div>
+            <div class="manga">
+                <img src="Image/Turning the Mad Dog into a Genteel Lord.jpg" alt="Turning the Mad Dog into a Genteel Lord" class="manga-image">
+                <p class="manga-title">Turning the Mad Dog into a Genteel Lord</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    tabButtons.forEach(btn => btn.classList.remove('on'));
+
+                    this.classList.add('on');
+
+                    console.log('Clicked tab:', this.textContent.trim());
+                });
+            });
+        });
+    </script>
+</body>
+</html>
